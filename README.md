@@ -1,4 +1,4 @@
-# ⚽ ea-fc-dataset
+# ⚽ ea-fc
 
 ![Status](https://img.shields.io/badge/Status-Available-green)
 ![License](https://img.shields.io/badge/License-MIT-blue)
