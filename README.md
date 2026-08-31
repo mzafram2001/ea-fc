@@ -76,14 +76,14 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | :--- | :--- | :--- | :--- | :--- |
 | **E. Haaland** | Manchester City | ST | 91 | €172.5M |
 | **K. Mbappé** | Real Madrid | ST, LW, LM | 91 | €157.0M |
-| **P. González** | FC Barcelona | CM, CDM, CAM | 90 | €165.0M |
-| **V. Machado** | Paris Saint-Germain | CM, CDM, CAM | 90 | €149.0M |
+| **Pedri** | FC Barcelona | CM, CDM, CAM | 90 | €165.0M |
+| **Vitinha** | Paris Saint-Germain | CM, CDM, CAM | 90 | €149.0M |
 | **O. Dembélé** | Paris Saint-Germain | ST, RW, CAM | 90 | €122.5M |
 | **H. Kane** | Bayern München | ST | 90 | €101.0M |
 | **T. Courtois** | Real Madrid | GK | 90 | €39.0M |
+| **Lamine Yamal** | FC Barcelona | RW, RM | 89 | €147.0M |
 | **J. Bellingham** | Real Madrid | CAM, CM, LM | 89 | €150.5M |
-| **L. Yamal** | FC Barcelona | RW, RM | 89 | €147.0M |
-| **V. José** | Real Madrid | LW, ST, LM | 89 | €141.0M |
+| **Vini Jr.** | Real Madrid | LW, ST, LM | 89 | €141.0M |
 
 </details>
 
@@ -94,16 +94,16 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 
 | Player | Club | Position | Overall | Value |
 | :--- | :--- | :--- | :--- | :--- |
-| **R. Hernández** | Manchester City | CDM, CM | 91 | €115.5M |
+| **Rodri** | Manchester City | CDM, CM | 91 | €115.5M |
 | **M. Salah** | Liverpool FC | RM, RW | 91 | €104.0M |
 | **J. Bellingham** | Real Madrid | CAM, CM | 90 | €174.5M |
-| **V. José** | Real Madrid | LW, ST | 90 | €171.5M |
+| **Vini Jr.** | Real Madrid | LW, ST | 90 | €171.5M |
 | **K. Mbappé** | Real Madrid | ST, LW | 90 | €160.0M |
 | **E. Haaland** | Manchester City | ST | 90 | €157.0M |
-| **H. Kane** | Bayern München | ST | 90 | €117.5M |
 | **V. van Dijk** | Liverpool FC | CB | 90 | €77.5M |
+| **H. Kane** | Bayern München | ST | 90 | €117.5M |
 | **F. Wirtz** | Bayer 04 Leverkusen | CAM, ST | 89 | €143.5M |
-| **K. De Bruyne** | Manchester City | CM, CAM | 89 | €63.5M |
+| **Alisson** | Liverpool FC | GK | 89 | €54.5M |
 
 </details>
 
@@ -117,13 +117,13 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **E. Haaland** | Manchester City | ST | 91 | €185.0M |
 | **K. Mbappé** | Paris Saint-Germain | ST, LW | 91 | €181.5M |
 | **K. De Bruyne** | Manchester City | CM, CAM | 91 | €103.0M |
-| **R. Hernández** | Manchester City | CDM, CM | 90 | €129.5M |
+| **Rodri** | Manchester City | CDM, CM | 90 | €129.5M |
 | **H. Kane** | Bayern München | ST | 90 | €119.5M |
 | **T. Courtois** | Real Madrid | GK | 90 | €63.0M |
 | **R. Lewandowski** | FC Barcelona | ST | 90 | €58.0M |
 | **L. Messi** | Inter Miami | CF, CAM | 90 | €41.0M |
-| **V. José** | Real Madrid | LW, ST | 89 | €158.5M |
-| **R. Dias** | Manchester City | CB | 89 | €106.5M |
+| **Vini Jr.** | Real Madrid | LW, ST | 89 | €158.5M |
+| **Rúben Dias** | Manchester City | CB | 89 | €106.5M |
 
 </details>
 <!-- SEASONS_SUMMARY_END -->
