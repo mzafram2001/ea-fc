@@ -41,7 +41,7 @@ def generate_season_markdown(csv_path, game_name, is_latest=False):
     ]
     
     for _, row in top_10.iterrows():
-        # Usamos el alias en lugar del short_name
+        # Usamos el alias para que salga limpio
         name = row.get("alias", "N/A")
         club = row.get("club_name", "N/A")
         pos = row.get("positions", "N/A")
@@ -58,27 +58,28 @@ def update_readme():
         print(f"Directory '{DATA_DIR}' not found.")
         return
 
-    # Buscar carpetas de años (ej: '2024', '2025')
-    seasons = [s for s in os.listdir(DATA_DIR) if os.path.isdir(os.path.join(DATA_DIR, s)) and s.isdigit()]
-    if not seasons:
-        print("No season directories found in data/.")
+    # Buscar archivos CSV directamente en la carpeta data/
+    csv_files = [f for f in os.listdir(DATA_DIR) if f.endswith(".csv")]
+    
+    if not csv_files:
+        print("No CSV files found in data/.")
         return
 
-    # Ordenar de más reciente a más antiguo
-    seasons.sort(reverse=True)
+    # Ordenar alfabéticamente inverso (dataset_ea_fc_26.csv irá antes que el 25)
+    csv_files.sort(reverse=True)
     summary_blocks = []
     
-    for idx, year in enumerate(seasons):
-        season_dir = os.path.join(DATA_DIR, year)
-        # Buscar el archivo CSV de ese año
-        csv_files = [f for f in os.listdir(season_dir) if f.endswith(".csv")]
+    for idx, filename in enumerate(csv_files):
+        csv_path = os.path.join(DATA_DIR, filename)
         
-        if not csv_files:
-            continue
+        # Extraer el año del nombre del archivo (ej: de "dataset_ea_fc_26.csv" saca "26")
+        match = re.search(r'_(\d{2})\.csv', filename)
+        if match:
+            year_suffix = match.group(1)
+            game_name = f"EA FC {year_suffix}" if int(year_suffix) >= 24 else f"FIFA {year_suffix}"
+        else:
+            game_name = filename.replace('.csv', '') # Fallback por si el nombre es raro
             
-        csv_path = os.path.join(season_dir, csv_files[0])
-        game_name = f"EA FC {year[-2:]}" if int(year) >= 2024 else f"FIFA {year[-2:]}"
-        
         block = generate_season_markdown(csv_path, game_name, is_latest=(idx == 0))
         summary_blocks.append(block)
 
