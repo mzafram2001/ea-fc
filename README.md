@@ -23,7 +23,7 @@ ea-fc/
 │   └── FUNDING.yml
 │ 
 ├── data/
-│   ├── dataset_ea_fc_25.csv
+│   ├── dataset_ea_fc_26.csv
 │   ├── dataset_ea_fc_25.csv
 │   ├── dataset_ea_fc_24.csv
 │   ├── dataset_fifa_23.csv
