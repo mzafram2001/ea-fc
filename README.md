@@ -136,7 +136,7 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 import pandas as pd
 
 # Load EA FC 24 data directly from GitHub
-url = "https://raw.githubusercontent.com/mzafram2001/ea-fc/main/data/2024/dataset_ea_fc_24.csv"
+url = "https://raw.githubusercontent.com/mzafram2001/ea-fc/main/data/dataset_ea_fc_24.csv"
 df_fc24 = pd.read_csv(url)
 
 # Find the top 5 young players with the highest potential
