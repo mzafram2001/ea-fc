@@ -18,11 +18,9 @@ HEADERS = {
 BASE_URL = "https://sofifa.com"
 
 # --- VERSION CODES ---
-# El primer elemento de este diccionario se considerará siempre el "Último Juego"
+# Se mantiene únicamente EA FC 26 para que el scraper solo procese este juego
 VERSION_CODES = {
-    "EA FC 26": "260046", 
-    "EA FC 25": "250044", 
-    "EA FC 24": "240050"
+    "EA FC 26": "260046"
 }
 
 # --- COLUMNS TO EXTRACT ---
