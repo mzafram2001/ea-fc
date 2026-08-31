@@ -262,20 +262,13 @@ if __name__ == "__main__":
     latest_game = list(VERSION_CODES.keys())[0]
     
     for game_name, version_code in VERSION_CODES.items():
-        
-        # Generar ruta del estilo "data/2026/dataset_ea_fc_26.csv"
-        year_suffix = game_name.split()[-1]
-        full_year = f"20{year_suffix}" if len(year_suffix) == 2 else year_suffix
-        
-        season_dir = os.path.join("data", full_year)
-        os.makedirs(season_dir, exist_ok=True)
-        
+            
         friendly_name = game_name.replace(' ', '_').lower()
         file_prefix = "test_" if TEST_MODE else ""
-        OUTPUT_FILE = os.path.join(season_dir, f"{file_prefix}dataset_{friendly_name}.csv")
-
+        OUTPUT_FILE = os.path.join("data", f"{file_prefix}dataset_{friendly_name}.csv")
+    
         is_latest = (game_name == latest_game)
-
+    
         print("\n" + "="*60)
         print(f"[*] Starting EXTRACTION for {game_name} (Roster: {version_code})")
         print(f"[*] Destination: {OUTPUT_FILE}")
