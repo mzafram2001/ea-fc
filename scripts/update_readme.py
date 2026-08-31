@@ -25,8 +25,8 @@ def generate_season_markdown(csv_path, game_name, is_latest=False):
     """Genera el bloque Markdown del Top 10 para una edición específica."""
     df = pd.read_csv(csv_path)
     
-    # Ordenar por Overall (descendente) y luego por Valor (descendente) en caso de empate
-    top_10 = df.sort_values(by=["overall", "value_eur"], ascending=[False, False]).head(10)
+    # Ordenar por Overall (descendente) y luego por Potential (descendente) en caso de empate
+    top_10 = df.sort_values(by=["overall", "potential"], ascending=[False, False]).head(10)
     
     open_attr = " open" if is_latest else ""
     
@@ -41,7 +41,8 @@ def generate_season_markdown(csv_path, game_name, is_latest=False):
     ]
     
     for _, row in top_10.iterrows():
-        name = row.get("short_name", "N/A")
+        # Usamos el alias en lugar del short_name
+        name = row.get("alias", "N/A")
         club = row.get("club_name", "N/A")
         pos = row.get("positions", "N/A")
         ovr = row.get("overall", 0)
