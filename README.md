@@ -23,12 +23,12 @@ ea-fc/
 │   └── FUNDING.yml
 │ 
 ├── data/
-│   ├── 2024/
-│   │   └── dataset_ea_fc_24.csv
-│   ├── 2025/
-│   │   └── dataset_ea_fc_25.csv
-│   └── 2026/
-│       └── dataset_ea_fc_26.csv
+│   ├── dataset_ea_fc_25.csv
+│   ├── dataset_ea_fc_25.csv
+│   ├── dataset_ea_fc_24.csv
+│   ├── dataset_fifa_23.csv
+│   ├── dataset_fifa_22.csv
+│   └── ...
 │
 ├── scripts/
 │   ├── get_data.py
