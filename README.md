@@ -494,4 +494,4 @@ print(wonderkids[['short_name', 'club_name', 'overall', 'potential', 'value_eur'
 >
 > ☕ If this dataset saves you time in your analysis or fantasy leagues, you can also [buy me a coffee on Ko-fi](https://ko-fi.com/mzm0102).
 <br>
-<!-- LAST_CHECKED_START -->Last checked: 2026-08-31<!-- LAST_CHECKED_END -->
+<!-- LAST_CHECKED_START -->Last checked: 2026-09-07<!-- LAST_CHECKED_END -->
