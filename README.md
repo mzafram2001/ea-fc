@@ -77,7 +77,7 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **K. Mbappé** | Real Madrid | ST, LW | 91 | €170.0M |
 | **E. Haaland** | Manchester City | ST | 91 | €167.0M |
 | **Lamine Yamal** | FC Barcelona | RW, RM | 90 | €167.5M |
-| **J. Bellingham** | Real Madrid | CAM, CM, LM, ST | 90 | €163.0M |
+| **J. Bellingham** | Real Madrid | CAM, CM, LM, ST, CDM, LW | 90 | €163.0M |
 | **Pedri** | FC Barcelona | CM, CDM, CAM | 90 | €162.0M |
 | **Vitinha** | Paris Saint-Germain | CM, CDM | 90 | €147.0M |
 | **M. Olise** | Bayern München | RM, RW, CAM | 90 | €155.0M |
@@ -514,4 +514,4 @@ print(wonderkids[['short_name', 'club_name', 'overall', 'potential', 'value_eur'
 >
 > ☕ If this dataset saves you time in your analysis or fantasy leagues, you can also [buy me a coffee on Ko-fi](https://ko-fi.com/mzm0102).
 <br>
-<!-- LAST_CHECKED_START -->Last checked: 2026-09-18<!-- LAST_CHECKED_END -->
+<!-- LAST_CHECKED_START -->Last checked: 2026-09-21<!-- LAST_CHECKED_END -->
