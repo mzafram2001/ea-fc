@@ -20,7 +20,7 @@ BASE_URL = "https://sofifa.com"
 # --- VERSION CODES ---
 # Se mantiene únicamente EA FC 27 para que el scraper solo procese este juego
 VERSION_CODES = {
-    "EA FC 27": "270002"
+    "EA FC 27": "270003"
 }
 
 # --- COLUMNS TO EXTRACT ---
