@@ -1,25 +1,24 @@
 import time
 import re
 import os
-import requests
+import cloudscraper 
 from bs4 import BeautifulSoup
 import pandas as pd
 
-# Headers to simulate a real browser request and avoid bot protections
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0.0.0 Safari/537.36"
-    ),
-    "Accept-Language": "en-US,en;q=0.9",
-}
-
 BASE_URL = "https://sofifa.com"
+
+# Creamos el scraper configurado para simular ser un navegador real
+scraper = cloudscraper.create_scraper(
+    browser={
+        'browser': 'chrome',
+        'platform': 'windows',
+        'desktop': True
+    }
+)
 
 # --- VERSION CODES ---
 VERSION_CODES = {
-    "EA FC 27": "270003"
+    "EA FC 26": "260046"
 }
 
 # --- COLUMNS TO EXTRACT ---
@@ -114,14 +113,14 @@ def get_players_page(offset: int = 0, version_code: str = "") -> list[dict]:
     max_retries = 3
     for attempt in range(max_retries):
         try:
-            response = requests.get(url, headers=HEADERS, timeout=15)
+            response = scraper.get(url, timeout=15)
             if response.status_code == 200:
                 break
             print(f"[!] Error fetching offset {offset}. Status: {response.status_code}. Retrying...")
-            time.sleep(2)
-        except requests.RequestException as e:
+            time.sleep(3)
+        except Exception as e:
             print(f"[!] Request Exception at offset {offset}: {e}. Retrying...")
-            time.sleep(2)
+            time.sleep(3)
     else:
         print(f"[-] Max retries reached for offset {offset}. Skipping.")
         return []
@@ -252,7 +251,7 @@ if __name__ == "__main__":
     # Aseguramos que existe la carpeta base de datos
     os.makedirs("data", exist_ok=True)
     
-    # [CORRECCIÓN] Usamos [-1] para asegurar que tome el último juego del diccionario (EA FC 27)
+    # Identificamos el último juego configurado
     latest_game = list(VERSION_CODES.keys())[-1]
     print(f"[*] El juego más reciente configurado es: {latest_game}")
     
@@ -312,7 +311,6 @@ if __name__ == "__main__":
             cols = ['game_version'] + [c for c in df_page.columns if c != 'game_version']
             df_page = df_page[cols]
             
-            # Aquí se crea si no existe o se adjunta si existe, por lotes de la paginación
             if not os.path.exists(OUTPUT_FILE):
                  df_page.to_csv(OUTPUT_FILE, index=False, encoding="utf-8-sig")
             else:
