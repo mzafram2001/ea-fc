@@ -74,15 +74,15 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 
 | Player | Club | Position | Overall | Value |
 | :--- | :--- | :--- | :--- | :--- |
-| **K. Mbappé** | Real Madrid | ST, LW | 91 | €170.0M |
-| **E. Haaland** | Manchester City | ST | 91 | €167.0M |
-| **Lamine Yamal** | FC Barcelona | RW, RM | 90 | €167.5M |
-| **J. Bellingham** | Real Madrid | CAM, CM, LM, ST, CDM, LW | 90 | €163.0M |
-| **Pedri** | FC Barcelona | CM, CDM, CAM | 90 | €162.0M |
-| **M. Olise** | Bayern München | RM, RW, CAM | 90 | €155.0M |
-| **Vitinha** | Paris Saint-Germain | CM, CDM | 90 | €147.0M |
-| **O. Dembélé** | Paris Saint-Germain | ST, RW, CAM, RM | 90 | €136.5M |
-| **Rodri** | FC Barcelona | CDM, CM | 90 | €110.0M |
+| **E. Haaland** | Manchester City | ST | 91 | €148.0M |
+| **K. Mbappé** | Real Madrid | ST, LW | 91 | €142.5M |
+| **J. Bellingham** | Real Madrid | CAM, CM, LM, ST, CDM, LW | 90 | €137.5M |
+| **M. Olise** | Bayern München | RM, RW, CAM | 90 | €137.5M |
+| **Pedri** | FC Barcelona | CM, CDM, CAM | 90 | €136.5M |
+| **Vitinha** | Paris Saint-Germain | CM, CDM | 90 | €129.5M |
+| **Lamine Yamal** | FC Barcelona | RW, RM | 90 | €124.5M |
+| **O. Dembélé** | Paris Saint-Germain | ST, RW, CAM, RM | 90 | €119.5M |
+| **Rodri** | FC Barcelona | CDM, CM | 90 | €100.0M |
 | **H. Kane** | Bayern München | ST | 90 | €97.0M |
 
 </details>
