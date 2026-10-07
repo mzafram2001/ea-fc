@@ -47,3 +47,10 @@ jobs:
                 
           git add .
           git diff --quiet && git diff --staged --quiet || (git commit -m "auto: Update EA FC dataset & README" && git push)
+
+      - name: Upload Error Screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-screenshots
+          path: "*.png"
