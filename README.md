@@ -78,12 +78,12 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **M. Maignan** | AC Milan | GK | 87 | €60.0M |
 | **Bremer** | Juventus FC | CB | 86 | €57.0M |
 | **M. Svilar** | AS Roma | GK | 85 | €50.5M |
-| **Y. Sommer** | Club Brugge KV | GK | 84 | €10.0M |
 | **W. Falcone** | Lecce | GK | 84 | €22.5M |
+| **Y. Sommer** | Club Brugge KV | GK | 84 | €10.0M |
 | **O. Baumann** | TSG 1899 Hoffenheim | GK | 84 | €1.1M |
 | **G. Mamardashvili** | Liverpool FC | GK | 83 | €37.0M |
 | **M. Akanji** | Inter Milan | CB | 83 | €33.0M |
-| **Ederson** | Fenerbahçe SK | GK | 82 | €41.0M |
+| **J. Burkardt** | Eintracht Frankfurt | ST | 82 | €41.0M |
 
 </details>
 
@@ -99,8 +99,8 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **Y. Sommer** | Inter Milan | GK | 86 | €7.5M |
 | **M. Carnesecchi** | Atalanta BC | GK | 85 | €55.0M |
 | **M. Svilar** | AS Roma | GK | 84 | €43.0M |
-| **O. Baumann** | TSG 1899 Hoffenheim | GK | 84 | €4.7M |
 | **M. ter Stegen** | Girona FC | GK | 84 | €13.5M |
+| **O. Baumann** | TSG 1899 Hoffenheim | GK | 84 | €4.7M |
 | **P. Gulácsi** | RB Leipzig | GK | 84 | €4.7M |
 | **Ederson** | Fenerbahçe SK | GK | 83 | €19.0M |
 | **S. de Vrij** | Inter Milan | CB | 83 | €17.5M |
@@ -120,10 +120,10 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **Vini Jr.** | Real Madrid | LW, ST | 90 | €171.5M |
 | **K. Mbappé** | Real Madrid | ST, LW | 90 | €160.0M |
 | **E. Haaland** | Manchester City | ST | 90 | €157.0M |
-| **V. van Dijk** | Liverpool FC | CB | 90 | €77.5M |
 | **H. Kane** | Bayern München | ST | 90 | €117.5M |
+| **V. van Dijk** | Liverpool FC | CB | 90 | €77.5M |
 | **F. Wirtz** | Bayer 04 Leverkusen | CAM, ST | 89 | €143.5M |
-| **Alisson** | Liverpool FC | GK | 89 | €54.5M |
+| **K. De Bruyne** | Manchester City | CM, CAM | 89 | €63.5M |
 
 </details>
 
@@ -161,9 +161,9 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **L. Messi** | Paris Saint-Germain | RW | 91 | €54.0M |
 | **E. Haaland** | Manchester City | ST | 90 | €176.5M |
 | **T. Courtois** | Real Madrid | GK | 90 | €79.5M |
-| **Alisson** | Liverpool FC | GK | 89 | €79.0M |
 | **J. Kimmich** | Bayern München | CDM, RB, CM | 89 | €105.5M |
-| **J. Oblak** | Atlético Madrid | GK | 89 | €79.0M |
+| **H. Kane** | Tottenham Hotspur | ST | 89 | €105.5M |
+| **M. Salah** | Liverpool FC | RW | 89 | €99.5M |
 
 </details>
 
@@ -181,9 +181,9 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **K. De Bruyne** | Manchester City | CM, CAM | 91 | €125.5M |
 | **K. Benzema** | Real Madrid | CF, ST | 91 | €84.0M |
 | **Cristiano Ronaldo** | Manchester United | ST | 91 | €45.0M |
+| **Neymar Jr** | Paris Saint-Germain | LW, CAM | 90 | €117.5M |
 | **N. Kanté** | Chelsea FC | CDM, CM | 90 | €100.0M |
 | **V. van Dijk** | Liverpool FC | CB | 90 | €100.0M |
-| **Neymar Jr** | Paris Saint-Germain | LW, CAM | 90 | €117.5M |
 
 </details>
 
@@ -197,13 +197,13 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **L. Messi** | Paris Saint-Germain | RW, ST, CF | 93 | €103.5M |
 | **R. Lewandowski** | Bayern München | ST | 92 | €124.5M |
 | **Cristiano Ronaldo** | Juventus FC | ST, LW | 92 | €63.0M |
-| **J. Oblak** | Atlético Madrid | GK | 91 | €120.0M |
-| **K. De Bruyne** | Manchester City | CM, CAM, CF | 91 | €127.5M |
 | **Neymar Jr** | Paris Saint-Germain | LW, CAM | 91 | €132.0M |
+| **K. De Bruyne** | Manchester City | CM, CAM, CF | 91 | €127.5M |
+| **J. Oblak** | Atlético Madrid | GK | 91 | €120.0M |
 | **K. Mbappé** | Paris Saint-Germain | ST, LW | 90 | €185.5M |
-| **M. ter Stegen** | FC Barcelona | GK | 90 | €102.0M |
-| **V. van Dijk** | Liverpool FC | CB | 90 | €113.0M |
 | **M. Salah** | Liverpool FC | RW | 90 | €120.5M |
+| **V. van Dijk** | Liverpool FC | CB | 90 | €113.0M |
+| **M. ter Stegen** | FC Barcelona | GK | 90 | €102.0M |
 
 </details>
 
@@ -217,13 +217,13 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **L. Messi** | FC Barcelona | RW, ST, CF | 94 | €95.5M |
 | **Cristiano Ronaldo** | Juventus FC | ST, LW | 93 | €58.5M |
 | **Neymar Jr** | Paris Saint-Germain | LW, CAM | 92 | €105.5M |
-| **J. Oblak** | Atlético Madrid | GK | 91 | €77.5M |
 | **V. van Dijk** | Liverpool FC | CB | 91 | €90.0M |
 | **K. De Bruyne** | Manchester City | CAM, CM | 91 | €90.0M |
-| **R. Lewandowski** | Bayern München | ST | 91 | €86.0M |
 | **E. Hazard** | Real Madrid | LW, ST | 91 | €90.0M |
-| **M. ter Stegen** | FC Barcelona | GK | 90 | €67.5M |
-| **Alisson** | Liverpool FC | GK | 90 | €64.5M |
+| **R. Lewandowski** | Bayern München | ST | 91 | €86.0M |
+| **J. Oblak** | Atlético Madrid | GK | 91 | €77.5M |
+| **M. Salah** | Liverpool FC | RW, ST | 90 | €80.5M |
+| **S. Mané** | Liverpool FC | LW | 90 | €80.5M |
 
 </details>
 
@@ -237,13 +237,13 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **L. Messi** | FC Barcelona | CF, RW, ST | 94 | €110.5M |
 | **Cristiano Ronaldo** | Juventus FC | ST, LW | 94 | €77.0M |
 | **Neymar Jr** | Paris Saint-Germain | LW, CAM | 92 | €108.0M |
-| **J. Oblak** | Atlético Madrid | GK | 91 | €75.5M |
 | **K. De Bruyne** | Manchester City | CAM, CM | 91 | €93.0M |
 | **E. Hazard** | Chelsea FC | LW, CF | 91 | €93.0M |
-| **L. Modrić** | Real Madrid | CM | 91 | €67.0M |
 | **L. Suárez** | FC Barcelona | ST | 91 | €80.0M |
+| **J. Oblak** | Atlético Madrid | GK | 91 | €75.5M |
+| **L. Modrić** | Real Madrid | CM | 91 | €67.0M |
 | **H. Kane** | Tottenham Hotspur | ST | 90 | €96.5M |
-| **De Gea** | Manchester United | GK | 90 | €62.5M |
+| **R. Lewandowski** | Bayern München | ST | 90 | €77.0M |
 
 </details>
 
@@ -259,10 +259,10 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **Neymar** | Paris Saint-Germain | LW | 92 | €119.5M |
 | **L. Suárez** | FC Barcelona | ST | 92 | €97.0M |
 | **M. Neuer** | Bayern München | GK | 92 | €61.0M |
-| **De Gea** | Manchester United | GK | 91 | €74.5M |
 | **K. De Bruyne** | Manchester City | CAM, CM | 91 | €104.5M |
-| **R. Lewandowski** | Bayern München | ST | 91 | €92.0M |
 | **E. Hazard** | Chelsea FC | LW, CF | 91 | €95.5M |
+| **R. Lewandowski** | Bayern München | ST | 91 | €92.0M |
+| **De Gea** | Manchester United | GK | 91 | €74.5M |
 | **T. Kroos** | Real Madrid | CM, CDM | 90 | €79.0M |
 
 </details>
@@ -279,11 +279,11 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **Neymar** | FC Barcelona | LW | 92 | €106.0M |
 | **L. Suárez** | FC Barcelona | ST | 92 | €83.0M |
 | **M. Neuer** | Bayern München | GK | 92 | €69.5M |
-| **De Gea** | Manchester United | GK | 90 | €68.5M |
-| **R. Lewandowski** | Bayern München | ST | 90 | €71.0M |
 | **G. Bale** | Real Madrid | RW | 90 | €72.0M |
+| **R. Lewandowski** | Bayern München | ST | 90 | €71.0M |
+| **De Gea** | Manchester United | GK | 90 | €68.5M |
 | **Z. Ibrahimović** | Manchester United | ST | 90 | €36.5M |
-| **T. Courtois** | Chelsea FC | GK | 89 | €65.5M |
+| **E. Hazard** | Chelsea FC | LW, LM | 89 | €71.5M |
 
 </details>
 
@@ -299,8 +299,8 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **Neymar** | FC Barcelona | LW | 90 | €89.5M |
 | **L. Suárez** | FC Barcelona | ST | 90 | €69.0M |
 | **M. Neuer** | Bayern München | GK | 90 | €58.0M |
-| **Z. Ibrahimović** | Paris Saint-Germain | ST | 89 | €40.5M |
 | **A. Robben** | Bayern München | RM, RW | 89 | €50.0M |
+| **Z. Ibrahimović** | Paris Saint-Germain | ST | 89 | €40.5M |
 | **E. Hazard** | Chelsea FC | LM | 88 | €64.0M |
 | **M. Özil** | Arsenal FC | CAM | 88 | €61.0M |
 | **R. Lewandowski** | Bayern München | ST | 88 | €57.0M |
@@ -319,11 +319,11 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **M. Neuer** | Bayern München | GK | 90 | €63.5M |
 | **A. Robben** | Bayern München | RM, LM, RW | 90 | €54.5M |
 | **L. Suárez** | FC Barcelona | ST, CF, RW | 89 | €49.5M |
-| **Z. Ibrahimović** | Paris Saint-Germain | ST | 89 | €34.5M |
 | **Iniesta** | FC Barcelona | CM | 89 | €36.0M |
+| **Z. Ibrahimović** | Paris Saint-Germain | ST | 89 | €34.5M |
 | **E. Hazard** | Chelsea FC | LM | 88 | €40.5M |
-| **F. Ribéry** | Bayern München | LM | 88 | €33.0M |
 | **B. Schweinsteiger** | Bayern München | CM, CDM | 88 | €39.0M |
+| **F. Ribéry** | Bayern München | LM | 88 | €33.0M |
 
 </details>
 
@@ -339,11 +339,11 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **Z. Ibrahimović** | Paris Saint-Germain | ST | 90 | €38.5M |
 | **L. Suárez** | Liverpool FC | ST, CF | 89 | €32.0M |
 | **Falcao** | AS Monaco | ST | 89 | €32.0M |
-| **F. Ribéry** | Bayern München | LM | 89 | €24.0M |
 | **R. van Persie** | Manchester United | ST | 89 | €30.0M |
 | **Iniesta** | FC Barcelona | CM, LW | 89 | €25.5M |
-| **E. Hazard** | Chelsea FC | LM, RM | 88 | €36.0M |
+| **F. Ribéry** | Bayern München | LM | 89 | €24.0M |
 | **S. Agüero** | Manchester City | ST | 88 | €42.0M |
+| **E. Hazard** | Chelsea FC | LM, RM | 88 | €36.0M |
 
 </details>
 
@@ -360,8 +360,8 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **Iniesta** | FC Barcelona | CM, LW, CAM | 90 | €34.0M |
 | **F. Ribéry** | Bayern München | LM, RM | 90 | €26.0M |
 | **Xavi** | FC Barcelona | CM, CAM | 90 | €18.5M |
-| **Z. Ibrahimović** | Paris Saint-Germain | ST | 89 | €23.0M |
 | **R. van Persie** | Manchester United | ST, CF | 89 | €26.0M |
+| **Z. Ibrahimović** | Paris Saint-Germain | ST | 89 | €23.0M |
 | **David Silva** | Manchester City | CAM, RM, LM | 88 | €30.5M |
 | **Casillas** | Real Madrid | GK | 88 | €12.5M |
 
@@ -380,9 +380,9 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **Xavi** | FC Barcelona | CM, CAM, CDM | 91 | €21.5M |
 | **W. Rooney** | Manchester United | CF, ST | 90 | €38.5M |
 | **Cesc Fàbregas** | FC Barcelona | CAM, CM, CDM | 89 | €35.5M |
-| **Casillas** | Real Madrid | GK | 89 | €20.0M |
 | **F. Ribéry** | Bayern München | LM, RW, RM | 89 | €27.0M |
 | **A. Robben** | Bayern München | RM, LM, RW, LW | 89 | €24.5M |
+| **Casillas** | Real Madrid | GK | 89 | €20.0M |
 | **N. Vidić** | Manchester United | CB | 89 | €16.0M |
 
 </details>
@@ -396,14 +396,14 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | :--- | :--- | :--- | :--- | :--- |
 | **L. Messi** | FC Barcelona | RW, RF, ST, CAM | 90 | €0 |
 | **Cristiano Ronaldo** | Real Madrid | RW, CAM, LW, ST | 89 | €0 |
-| **Casillas** | Real Madrid | GK | 88 | €0 |
 | **David Villa** | FC Barcelona | ST, CF, LW, CAM | 88 | €0 |
-| **W. Rooney** | Manchester United | ST, CF, LW, LF | 87 | €0 |
+| **Casillas** | Real Madrid | GK | 88 | €0 |
 | **N. Vidić** | Manchester United | CB | 87 | €0 |
+| **W. Rooney** | Manchester United | ST, CF, LW, LF | 87 | €0 |
 | **Xavi** | FC Barcelona | CM, CAM, CDM | 87 | €0 |
-| **Iniesta** | FC Barcelona | CAM, CM, RW, LW | 87 | €0 |
 | **A. Robben** | Bayern München | RM, LM, RW, LW | 87 | €0 |
-| **F. Ribéry** | Bayern München | LM, LW, CAM, RW | 86 | €0 |
+| **Iniesta** | FC Barcelona | CAM, CM, RW, LW | 87 | €0 |
+| **M. Neuer** | Schalke 04 | GK | 86 | €0 |
 
 </details>
 
@@ -416,14 +416,14 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | :--- | :--- | :--- | :--- | :--- |
 | **L. Messi** | FC Barcelona | RW | 90 | €0 |
 | **Casillas** | Real Madrid | GK | 90 | €0 |
-| **Cristiano Ronaldo** | Real Madrid | RW | 89 | €0 |
 | **W. Rooney** | Manchester United | CF | 89 | €0 |
 | **Júlio César** | Inter Milan | GK | 89 | €0 |
+| **Cristiano Ronaldo** | Real Madrid | RW | 89 | €0 |
 | **F. Fabregas** | Arsenal FC | CM | 88 | €0 |
-| **G. Buffon** | Juventus FC | GK | 88 | €0 |
+| **N. Vidić** | Manchester United | CB | 88 | €0 |
 | **David Villa** | Valencia CF | ST | 88 | €0 |
 | **Fernando Torres** | Liverpool FC | ST | 88 | €0 |
-| **S. Gerrard** | Liverpool FC | CAM | 88 | €0 |
+| **Z. Ibrahimović** | FC Barcelona | ST | 88 | €0 |
 
 </details>
 
@@ -438,12 +438,12 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **L. Messi** | FC Barcelona | RW | 90 | €0 |
 | **Cristiano Ronaldo** | Manchester United | RW | 90 | €0 |
 | **G. Buffon** | Juventus FC | GK | 90 | €0 |
-| **Z. Ibrahimović** | Inter Milan | ST | 89 | €0 |
 | **Kaká** | AC Milan | CAM | 89 | €0 |
+| **Z. Ibrahimović** | Inter Milan | ST | 89 | €0 |
 | **F. Ribéry** | Bayern München | LM | 88 | €0 |
 | **Fernando Torres** | Liverpool FC | ST | 88 | €0 |
 | **P. Čech** | Chelsea FC | GK | 88 | €0 |
-| **A. Nesta** | AC Milan | CB | 88 | €0 |
+| **S. Gerrard** | Liverpool FC | CM | 88 | €0 |
 
 </details>
 
@@ -454,16 +454,16 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 
 | Player | Club | Position | Overall | Value |
 | :--- | :--- | :--- | :--- | :--- |
-| **Cristiano Ronaldo** | Manchester United | RW | 91 | €0 |
 | **Ronaldinho** | FC Barcelona | CAM | 91 | €0 |
+| **Cristiano Ronaldo** | Manchester United | RW | 91 | €0 |
+| **T. Henry** | FC Barcelona | ST | 91 | €0 |
 | **G. Buffon** | Juventus FC | GK | 91 | €0 |
 | **A. Nesta** | AC Milan | CB | 91 | €0 |
-| **T. Henry** | FC Barcelona | ST | 91 | €0 |
+| **H. de Noteboom** | Netherlands | ST | 90 | €0 |
 | **Kaká** | AC Milan | CAM | 90 | €0 |
 | **W. Rooney** | Manchester United | CF | 90 | €0 |
 | **J. Terry** | Chelsea FC | CB | 90 | €0 |
-| **H. de Noteboom** | Netherlands | ST | 90 | €0 |
-| **David Villa** | Valencia CF | ST | 89 | €0 |
+| **Cris** | Olympique Lyonnais | CB | 89 | €0 |
 
 </details>
 
@@ -478,12 +478,12 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 | **G. Buffon** | Juventus FC | GK | 93 | €0 |
 | **G. Coupet** | Olympique Lyonnais | GK | 92 | €0 |
 | **Ronaldinho** | FC Barcelona | CAM | 91 | €0 |
+| **J. Terry** | Chelsea FC | CB | 91 | €0 |
 | **T. Henry** | Arsenal FC | ST | 91 | €0 |
 | **F. Cannavaro** | Real Madrid | CB | 91 | €0 |
 | **A. Nesta** | AC Milan | CB | 91 | €0 |
-| **J. Terry** | Chelsea FC | CB | 91 | €0 |
+| **Zé Roberto** | Santos | LW | 90 | €0 |
 | **D. Trezeguet** | Juventus FC | ST | 90 | €0 |
-| **F. Lampard** | Chelsea FC | CM | 90 | €0 |
 
 </details>
 <!-- SEASONS_SUMMARY_END -->
