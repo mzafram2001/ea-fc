@@ -74,16 +74,16 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 
 | Player | Club | Position | Overall | Value |
 | :--- | :--- | :--- | :--- | :--- |
-| **G. Donnarumma** | Manchester City | GK | 89 | €88.0M |
-| **M. Maignan** | AC Milan | GK | 87 | €60.0M |
-| **Bremer** | Juventus FC | CB | 86 | €57.0M |
-| **M. Svilar** | AS Roma | GK | 85 | €50.5M |
-| **W. Falcone** | Lecce | GK | 84 | €22.5M |
-| **Y. Sommer** | Club Brugge KV | GK | 84 | €10.0M |
-| **O. Baumann** | TSG 1899 Hoffenheim | GK | 84 | €1.1M |
-| **G. Mamardashvili** | Liverpool FC | GK | 83 | €37.0M |
-| **M. Akanji** | Inter Milan | CB | 83 | €33.0M |
-| **J. Burkardt** | Eintracht Frankfurt | ST | 82 | €41.0M |
+| **K. Mbappé** | Real Madrid | ST, LW | 91 | €170.0M |
+| **E. Haaland** | Manchester City | ST | 91 | €167.0M |
+| **Lamine Yamal** | FC Barcelona | RW, RM | 90 | €167.5M |
+| **J. Bellingham** | Real Madrid | CAM, CM, LM, ST, CDM, LW | 90 | €163.0M |
+| **Pedri** | FC Barcelona | CM, CDM, CAM | 90 | €162.0M |
+| **M. Olise** | Bayern München | RM, RW, CAM | 90 | €155.0M |
+| **Vitinha** | Paris Saint-Germain | CM, CDM | 90 | €147.0M |
+| **O. Dembélé** | Paris Saint-Germain | ST, RW, CAM, RM | 90 | €136.5M |
+| **Rodri** | FC Barcelona | CDM, CM | 90 | €110.0M |
+| **H. Kane** | Bayern München | ST | 90 | €97.0M |
 
 </details>
 
@@ -94,16 +94,16 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 
 | Player | Club | Position | Overall | Value |
 | :--- | :--- | :--- | :--- | :--- |
-| **M. Maignan** | AC Milan | GK | 87 | €61.0M |
-| **Bremer** | Juventus FC | CB | 86 | €58.5M |
-| **Y. Sommer** | Inter Milan | GK | 86 | €7.5M |
-| **M. Carnesecchi** | Atalanta BC | GK | 85 | €55.0M |
-| **M. Svilar** | AS Roma | GK | 84 | €43.0M |
-| **M. ter Stegen** | Girona FC | GK | 84 | €13.5M |
-| **O. Baumann** | TSG 1899 Hoffenheim | GK | 84 | €4.7M |
-| **P. Gulácsi** | RB Leipzig | GK | 84 | €4.7M |
-| **Ederson** | Fenerbahçe SK | GK | 83 | €19.0M |
-| **S. de Vrij** | Inter Milan | CB | 83 | €17.5M |
+| **E. Haaland** | Manchester City | ST | 91 | €172.5M |
+| **K. Mbappé** | Real Madrid | ST, LW, LM | 91 | €157.0M |
+| **Pedri** | FC Barcelona | CM, CDM, CAM | 90 | €165.0M |
+| **Vitinha** | Paris Saint-Germain | CM, CDM, CAM | 90 | €149.0M |
+| **O. Dembélé** | Paris Saint-Germain | ST, RW, CAM | 90 | €122.5M |
+| **H. Kane** | Bayern München | ST | 90 | €101.0M |
+| **T. Courtois** | Real Madrid | GK | 90 | €39.0M |
+| **J. Bellingham** | Real Madrid | CAM, CM, LM | 89 | €150.5M |
+| **Lamine Yamal** | FC Barcelona | RW, RM | 89 | €147.0M |
+| **Vini Jr.** | Real Madrid | LW, ST, LM | 89 | €141.0M |
 
 </details>
 
