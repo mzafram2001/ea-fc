@@ -34,8 +34,8 @@ jobs:
           pip install beautifulsoup4 pandas seleniumbase
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       
-      - name: Run extraction script
-        run: xvfb-run python scripts/get_data.py
+      # - name: Run extraction script
+        # run: xvfb-run python scripts/get_data.py
 
       - name: Update README with season stats
         run: python scripts/update_readme.py
