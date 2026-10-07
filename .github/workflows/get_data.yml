@@ -2,7 +2,7 @@ name: Update EA FC Dataset
 
 on:
   schedule:
-    - cron: '0 3 * * 1' # Ejecuta cada lunes a las 3:00 AM UTC
+    - cron: '0 3 * * 1'
   workflow_dispatch:
 
 env:
@@ -28,12 +28,14 @@ jobs:
 
       - name: Install dependencies
         run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 pandas cloudscraper curl-cffi
+          pip install beautifulsoup4 pandas seleniumbase
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
+      
       - name: Run extraction script
-        run: python scripts/get_data.py
+        run: xvfb-run python scripts/get_data.py
 
       - name: Update README with season stats
         run: python scripts/update_readme.py
