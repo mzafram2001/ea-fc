@@ -1,20 +1,11 @@
 import time
 import re
 import os
-import cloudscraper 
 from bs4 import BeautifulSoup
 import pandas as pd
+from curl_cffi import requests as cffi_requests
 
 BASE_URL = "https://sofifa.com"
-
-# Creamos el scraper configurado para simular ser un navegador real
-scraper = cloudscraper.create_scraper(
-    browser={
-        'browser': 'chrome',
-        'platform': 'windows',
-        'desktop': True
-    }
-)
 
 # --- VERSION CODES ---
 VERSION_CODES = {
@@ -61,7 +52,6 @@ def build_sofifa_url(offset: int, version_code: str) -> str:
     return f"{base}&{col_params}"
 
 def build_short_name(alias_name: str, long_name: str) -> str:
-    """Intelligent heuristic to format short names across different cultures."""
     alias_lower = alias_name.lower()
     particles = {
         "de", "van", "von", "da", "das", "dos", "del", "la", "le", "di", 
@@ -75,7 +65,6 @@ def build_short_name(alias_name: str, long_name: str) -> str:
         
     first_initial = f"{name_parts[0][0]}."
     
-    # 1. Agrupar partículas con los apellidos correspondientes
     grouped_parts = []
     i = 0
     while i < len(name_parts):
@@ -91,7 +80,6 @@ def build_short_name(alias_name: str, long_name: str) -> str:
             grouped_parts.append(part)
             i += 1
 
-    # 2. Heurística de selección
     if len(grouped_parts) == 2:
         surname = grouped_parts[1]
     elif len(grouped_parts) > 2:
@@ -113,7 +101,9 @@ def get_players_page(offset: int = 0, version_code: str = "") -> list[dict]:
     max_retries = 3
     for attempt in range(max_retries):
         try:
-            response = scraper.get(url, timeout=15)
+            # MAGIA AQUÍ: impersonate="chrome" falsifica la conexión para que Cloudflare crea que es un navegador real
+            response = cffi_requests.get(url, impersonate="chrome", timeout=15)
+            
             if response.status_code == 200:
                 break
             print(f"[!] Error fetching offset {offset}. Status: {response.status_code}. Retrying...")
@@ -178,24 +168,20 @@ def get_players_page(offset: int = 0, version_code: str = "") -> list[dict]:
             "nationality": nation_name,
             "club_name": club_name,
             "positions": ", ".join(positions),
-            
             "age": get_val("ae"),
             "height_cm": get_val("hi", is_dirty_number=True),
             "weight_kg": get_val("wi", is_dirty_number=True),
             "preferred_foot": translate_foot(get_val("pf", is_text=True)),
-            
             "overall": get_val("oa"),
             "potential": get_val("pt"),
             "value_eur": get_val("vl", is_money=True),
             "wage_eur": get_val("wg", is_money=True),
-            
             "pace": get_val("pac"),
             "shooting": get_val("sho"),
             "passing": get_val("pas"),
             "dribbling": get_val("dri"),
             "defending": get_val("def"),
             "physical": get_val("phy"),
-            
             "crossing": get_val("cr"),
             "finishing": get_val("fi"),
             "heading_accuracy": get_val("he"),
@@ -222,7 +208,6 @@ def get_players_page(offset: int = 0, version_code: str = "") -> list[dict]:
             "vision": get_val("vi"),
             "penalties": get_val("pe"),
             "composure": get_val("cm"),
-            
             "defensive_awareness": get_val("ma"),
             "standing_tackle": get_val("sa"),
             "sliding_tackle": get_val("sl"),
@@ -231,27 +216,20 @@ def get_players_page(offset: int = 0, version_code: str = "") -> list[dict]:
             "gk_kicking": get_val("gc"),
             "gk_positioning": get_val("gp"),
             "gk_reflexes": get_val("gr"),
-            
             "playstyles": get_val("ps1", is_text=True),
             "playstyles_plus": get_val("ps2", is_text=True)
         }
-
         players.append(player_data)
 
     return players
 
-# ==========================================
-# Main Execution Block
-# ==========================================
 if __name__ == "__main__":
     
     TEST_MODE = False
     MAX_TEST_PAGES = 1 
     
-    # Aseguramos que existe la carpeta base de datos
     os.makedirs("data", exist_ok=True)
     
-    # Identificamos el último juego configurado
     latest_game = list(VERSION_CODES.keys())[-1]
     print(f"[*] El juego más reciente configurado es: {latest_game}")
     
@@ -268,7 +246,6 @@ if __name__ == "__main__":
         print(f"[*] Destination: {OUTPUT_FILE}")
         print("="*60)
         
-        # --- LÓGICA DE ACTUALIZACIÓN / SKIP ---
         scraped_ids = set()
         
         if os.path.exists(OUTPUT_FILE):
@@ -306,7 +283,6 @@ if __name__ == "__main__":
                  time.sleep(1.0)
                  continue
                  
-            # Guardar el lote en el CSV
             df_page = pd.DataFrame(new_players)
             cols = ['game_version'] + [c for c in df_page.columns if c != 'game_version']
             df_page = df_page[cols]
