@@ -68,6 +68,46 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 
 <!-- SEASONS_SUMMARY_START -->
 <details open>
+<summary><b>⚽ EA FC 27</b></summary>
+
+#### 👤 Top 10 Players
+
+| Player | Club | Position | Overall | Value |
+| :--- | :--- | :--- | :--- | :--- |
+| **G. Donnarumma** | Manchester City | GK | 89 | €88.0M |
+| **M. Maignan** | AC Milan | GK | 87 | €60.0M |
+| **Bremer** | Juventus FC | CB | 86 | €57.0M |
+| **M. Svilar** | AS Roma | GK | 85 | €50.5M |
+| **Y. Sommer** | Club Brugge KV | GK | 84 | €10.0M |
+| **W. Falcone** | Lecce | GK | 84 | €22.5M |
+| **O. Baumann** | TSG 1899 Hoffenheim | GK | 84 | €1.1M |
+| **G. Mamardashvili** | Liverpool FC | GK | 83 | €37.0M |
+| **M. Akanji** | Inter Milan | CB | 83 | €33.0M |
+| **Ederson** | Fenerbahçe SK | GK | 82 | €41.0M |
+
+</details>
+
+<details>
+<summary><b>⚽ EA FC 26</b></summary>
+
+#### 👤 Top 10 Players
+
+| Player | Club | Position | Overall | Value |
+| :--- | :--- | :--- | :--- | :--- |
+| **M. Maignan** | AC Milan | GK | 87 | €61.0M |
+| **Bremer** | Juventus FC | CB | 86 | €58.5M |
+| **Y. Sommer** | Inter Milan | GK | 86 | €7.5M |
+| **M. Carnesecchi** | Atalanta BC | GK | 85 | €55.0M |
+| **M. Svilar** | AS Roma | GK | 84 | €43.0M |
+| **O. Baumann** | TSG 1899 Hoffenheim | GK | 84 | €4.7M |
+| **M. ter Stegen** | Girona FC | GK | 84 | €13.5M |
+| **P. Gulácsi** | RB Leipzig | GK | 84 | €4.7M |
+| **Ederson** | Fenerbahçe SK | GK | 83 | €19.0M |
+| **S. de Vrij** | Inter Milan | CB | 83 | €17.5M |
+
+</details>
+
+<details>
 <summary><b>⚽ EA FC 25</b></summary>
 
 #### 👤 Top 10 Players
