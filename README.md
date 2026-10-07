@@ -68,26 +68,6 @@ Each version file (`data/{year}/dataset_ea_fc_{year}.csv`) follows a standardize
 
 <!-- SEASONS_SUMMARY_START -->
 <details open>
-<summary><b>⚽ EA FC 26</b></summary>
-
-#### 👤 Top 10 Players
-
-| Player | Club | Position | Overall | Value |
-| :--- | :--- | :--- | :--- | :--- |
-| **E. Haaland** | Manchester City | ST | 91 | €172.5M |
-| **K. Mbappé** | Real Madrid | ST, LW, LM | 91 | €157.0M |
-| **Pedri** | FC Barcelona | CM, CDM, CAM | 90 | €165.0M |
-| **Vitinha** | Paris Saint-Germain | CM, CDM, CAM | 90 | €149.0M |
-| **O. Dembélé** | Paris Saint-Germain | ST, RW, CAM | 90 | €122.5M |
-| **H. Kane** | Bayern München | ST | 90 | €101.0M |
-| **T. Courtois** | Real Madrid | GK | 90 | €39.0M |
-| **Lamine Yamal** | FC Barcelona | RW, RM | 89 | €147.0M |
-| **J. Bellingham** | Real Madrid | CAM, CM, LM | 89 | €150.5M |
-| **Vini Jr.** | Real Madrid | LW, ST, LM | 89 | €141.0M |
-
-</details>
-
-<details>
 <summary><b>⚽ EA FC 25</b></summary>
 
 #### 👤 Top 10 Players
@@ -494,4 +474,4 @@ print(wonderkids[['short_name', 'club_name', 'overall', 'potential', 'value_eur'
 >
 > ☕ If this dataset saves you time in your analysis or fantasy leagues, you can also [buy me a coffee on Ko-fi](https://ko-fi.com/mzm0102).
 <br>
-<!-- LAST_CHECKED_START -->Last checked: 2026-10-05<!-- LAST_CHECKED_END -->
+<!-- LAST_CHECKED_START -->Last checked: 2026-10-07<!-- LAST_CHECKED_END -->
