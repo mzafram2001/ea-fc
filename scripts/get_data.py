@@ -19,7 +19,7 @@ BASE_URL = "https://sofifa.com"
 
 # --- VERSION CODES ---
 VERSION_CODES = {
-    "EA FC 26": "260046"
+    "EA FC 27": "270003"
 }
 
 # --- COLUMNS TO EXTRACT ---
