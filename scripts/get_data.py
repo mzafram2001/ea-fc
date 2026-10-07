@@ -8,7 +8,8 @@ from seleniumbase import Driver
 BASE_URL = "https://sofifa.com"
 
 VERSION_CODES = {
-    "EA FC 26": "260046"
+    "EA FC 26": "260046",
+    "EA FC 27": "270003"
 }
 
 SOFIFA_COLUMNS = [
@@ -72,35 +73,39 @@ def build_short_name(alias_name: str, long_name: str) -> str:
     else: surname = alias_name
     return f"{first_initial} {surname}"
 
-# AQUÍ LE PASAMOS EL 'driver' (el navegador) A LA FUNCIÓN
 def get_players_page(driver, offset: int = 0, version_code: str = "") -> list[dict]:
     url = build_sofifa_url(offset, version_code)
     
     max_retries = 3
     for attempt in range(max_retries):
         try:
-            # El navegador real entra a la web
-            driver.get(url)
+            # 1. MAGIA ANTI-CLOUDFLARE: Desconecta, carga y reconecta
+            driver.uc_open_with_reconnect(url, reconnect_time=6)
             
-            # Le damos 6 segundos la primera vez por si Cloudflare nos pone a "verificar"
-            time.sleep(6)
+            # 2. Intenta hacer click automático si aparece el checkbox de Cloudflare
+            try:
+                driver.uc_gui_click_captcha()
+                time.sleep(3)
+            except:
+                pass
             
-            # Extraemos el código fuente de la página YA CARGADA
             html = driver.page_source
             soup = BeautifulSoup(html, "html.parser")
             rows = soup.select("tbody tr")
             
             if rows:
-                break # Si hay filas, ¡hemos pasado!
+                break 
             else:
-                print(f"[!] Tabla vacía (posible captcha de Cloudflare). Reintentando... {attempt+1}/{max_retries}")
+                print(f"[!] Tabla vacía (bloqueo detectado). Reintentando... {attempt+1}/{max_retries}")
+                # 3. GUARDAMOS CAPTURA DE PANTALLA PARA VER EL BLOQUEO
+                driver.save_screenshot(f"error_cloudflare_offset_{offset}_intento_{attempt+1}.png")
                 time.sleep(5)
                 
         except Exception as e:
-            print(f"[!] Request Exception at offset {offset}: {e}. Retrying...")
+            print(f"[!] Exception at offset {offset}: {e}. Retrying...")
             time.sleep(5)
     else:
-        print(f"[-] Max retries reached for offset {offset}. Skipping.")
+        print(f"[-] Todos los reintentos fallaron para el offset {offset}.")
         return []
 
     players = []
@@ -169,7 +174,6 @@ if __name__ == "__main__":
     latest_game = list(VERSION_CODES.keys())[-1]
     
     print("\n[*] Iniciando navegador Antibot (Google Chrome en modo seguro)...")
-    # uc=True activa el modo indetectable. headless=False funciona gracias a xvfb en Actions
     driver = Driver(uc=True, headless=False)
     
     try:
@@ -203,7 +207,6 @@ if __name__ == "__main__":
             for offset in range(0, max_offset, 60):
                 print(f"[>] Fetching page offset {offset} for {game_name}...")
                 
-                # Pasamos el navegador a la función
                 players_page = get_players_page(driver, offset=offset, version_code=version_code)
                 
                 if not players_page:
@@ -237,6 +240,5 @@ if __name__ == "__main__":
                     
             print(f"\n[✓] DONE! {len(full_dataset)} players exported to {OUTPUT_FILE}")
     finally:
-        # Esto es clave: siempre cerramos el navegador al terminar para que Actions no se cuelgue
         driver.quit()
         print("[*] Navegador cerrado correctamente.")
