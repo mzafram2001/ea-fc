@@ -18,9 +18,8 @@ HEADERS = {
 BASE_URL = "https://sofifa.com"
 
 # --- VERSION CODES ---
-# Se mantiene únicamente EA FC 27 para que el scraper solo procese este juego
 VERSION_CODES = {
-    "EA FC 27": "270003"
+    "EA FC 26": "260046"
 }
 
 # --- COLUMNS TO EXTRACT ---
@@ -83,7 +82,6 @@ def build_short_name(alias_name: str, long_name: str) -> str:
     while i < len(name_parts):
         part = name_parts[i]
         if part.lower() in particles and i + 1 < len(name_parts):
-            # Verifica si hay partículas dobles (ej. "van" + "de" + "Beek")
             if name_parts[i+1].lower() in particles and i + 2 < len(name_parts):
                 grouped_parts.append(f"{part} {name_parts[i+1]} {name_parts[i+2]}")
                 i += 3
@@ -96,17 +94,14 @@ def build_short_name(alias_name: str, long_name: str) -> str:
 
     # 2. Heurística de selección
     if len(grouped_parts) == 2:
-        # Caso estándar (Nombre + Apellido)
         surname = grouped_parts[1]
     elif len(grouped_parts) > 2:
         last_word = grouped_parts[-1].lower()
         last_word_clean = last_word.replace(".", "").replace(",", "")
         
-        # Si la última palabra está en el alias o es un sufijo
         if last_word_clean in alias_lower or last_word_clean in ["jr", "junior"]:
             surname = grouped_parts[-1]
         else:
-            # Convención hispana por defecto
             surname = grouped_parts[1]
     else:
         surname = alias_name
@@ -142,7 +137,6 @@ def get_players_page(offset: int = 0, version_code: str = "") -> list[dict]:
         alias_name = link_elem.text.strip()
         long_name = link_elem.get("data-tippy-content", alias_name).strip()
         
-        # Generar nombre formateado inteligentemente
         short_name = build_short_name(alias_name, long_name)
         
         id_elem = row.select_one("td[data-col='pi']")
@@ -258,8 +252,9 @@ if __name__ == "__main__":
     # Aseguramos que existe la carpeta base de datos
     os.makedirs("data", exist_ok=True)
     
-    # Identificamos cuál es el último juego de la lista
-    latest_game = list(VERSION_CODES.keys())[0]
+    # [CORRECCIÓN] Usamos [-1] para asegurar que tome el último juego del diccionario (EA FC 27)
+    latest_game = list(VERSION_CODES.keys())[-1]
+    print(f"[*] El juego más reciente configurado es: {latest_game}")
     
     for game_name, version_code in VERSION_CODES.items():
             
@@ -301,7 +296,6 @@ if __name__ == "__main__":
                 
             new_players = []
             for player in players_page:
-                # Omitimos duplicados si los hubiera
                 if player["sofifa_id"] in scraped_ids:
                     continue
                 
@@ -318,6 +312,7 @@ if __name__ == "__main__":
             cols = ['game_version'] + [c for c in df_page.columns if c != 'game_version']
             df_page = df_page[cols]
             
+            # Aquí se crea si no existe o se adjunta si existe, por lotes de la paginación
             if not os.path.exists(OUTPUT_FILE):
                  df_page.to_csv(OUTPUT_FILE, index=False, encoding="utf-8-sig")
             else:
