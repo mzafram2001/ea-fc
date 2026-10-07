@@ -25,7 +25,8 @@ def generate_season_markdown(csv_path, game_name, is_latest=False):
     """Genera el bloque Markdown del Top 10 para una edición específica."""
     df = pd.read_csv(csv_path)
     
-    top_10 = df.sort_values(by=["overall", "potential"], ascending=[False, False]).head(10)
+    # ✅ Corregido: Ordena por overall y luego por value_eur
+    top_10 = df.sort_values(by=["overall", "value_eur"], ascending=[False, False]).head(10)
     open_attr = " open" if is_latest else ""
     
     md = [
